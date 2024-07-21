@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="success-message" class="success-message hidden">
+      <p>✔️ Message Sent!</p>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <form id="form" >
+      <h2>Contact Us</h2>
+      <div class="input">
+        <fieldset>
+          <legend class="n">First Name *</legend>
+          <input class="in"type="text" placeholder="Enter your first name" required>
+        </fieldset>
+        <fieldset>
+          <legend class="n">Last Name *</legend>
+          <input class="in" type="text" placeholder="Enter your last name">
+        </fieldset>
+      </div>
+      <div class="input">
+        <fieldset>
+          <legend class="n">Email Address *</legend>
+          <input class="em" type="email" placeholder="Enter your email address" required>
+        </fieldset>
+      </div>
+      <div class="input">
+        <fieldset>
+          <legend class="n">Query Type *</legend>
+          <fieldset class="qt">
+            <input class="rad" type="radio" name="query" value="General Enquiry" placeholder="general_enquiry" required>
+            <label for="General" class="g">General Enquiry</label>
+          </fieldset>
+          <fieldset class="qt">
+            <input class="rad" type="radio" name="query" value="Support Request" placeholder="support_request" required>
+            <label for="Support" class="g">Support Request</label>
+          </fieldset>
+        </fieldset>
+      </div>
+      <div class="message">
+        <fieldset>
+          <legend class="n">Message *</legend>
+          <input type="text" class="t"  required>
+        </fieldset>
+      </div>
+      <div class="input end">
+        <input class="ch" type="checkbox" name="end" placeholder="end" required 
+          oninvalid="this.setCustomValidity('To submit this form, please consent to being contacted')" 
+          oninput="this.setCustomValidity('')">
+        <legend class="n">I consent to being contacted by the team *</legend>
+      </div>
+      
+      <div class="s">
+        <button type="submit" class="submit"><span>Submit</span></button>
+      </div>
+    </form>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Saad Haider</a>.
+  </div>
+<script src="index.js"></script>
+</body>
+</html>
